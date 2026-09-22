@@ -9,4 +9,4 @@ def doctors(request):
     return render(request,"doctors.html",{"doctors":doctors})
 def patients(request):
     patients=Patient.objects.all()
-    return render(request,patients.html,{"patients":patients})
+    return render(request,"patients.html",{"patients":patients})
