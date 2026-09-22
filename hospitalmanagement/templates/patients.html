@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>website</title>
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'home' %}">home</a>
+            <a href="{% url 'doctors' %}">doctors</a>
+            <a href="{% url 'patients'  %}">patients</a>
+        </nav>
+        <h1>patients</h1>
+         {% for patient in patients %}
+        <p>name:{{patient.name}}</p>
+        <p>age:{{patient.age}}</p>
+        <p>place:{{patient.place}}</p>
+        {% endfor %}
+    </body>
+</html>
